@@ -1,50 +1,50 @@
-module.exports = function (grunt) {
+module.exports = (grunt) => {
     grunt.initConfig({
-        dist: "dist",
-        package: grunt.file.readJSON("package.json"),
-
-        clean: ["<%= dist %>/*"],
+        package: grunt.file.readJSON('package.json'),
+        clean: ['dist/*'],
         copy: {
-            main: {
-                files: [
-                    { expand: true, src: ["index.html"], dest: "<%= dist %>/", flatten: true },
-                    { expand: true, src: ["assets/**"], dest: "<%= dist %>/", flatten: true },
-                ]
+            all: {
+                expand: true,
+                src: ['src/sender/index.html', 'src/sender/cast-service.js'],
+                dest: 'dist/',
+                flatten: true
             }
         },
-        concat: {
-            options: {},
-            dist: {
-                src: [ "src/main.js" ],
-                dest: "dist/main.js",
-            },
-        },
-        uglify: {
-            js: {
-                files: {
-                    "dist/main.min.js": ['dist/main.js']
+        watch: {
+            scripts: {
+                files: ['**/*.js', '**/*.html'],
+                tasks: ['build'],
+                options: {
+                    spawn: false
                 }
             }
         },
         connect: {
             server: {
                 options: {
-                    protocol: "https",
-                    hostname: "jwplayer-chromecast.local.vuplay.co.uk",
-                    port: 14703,
-                    base: "dist",
+                    protocol: 'https',
+                    hostname: 'cast.studiodrm.local.drm.technology',
+                    port: 14705,
+                    base: 'dist',
                     keepalive: true
+                }
+            }
+        },
+        concurrent: {
+            connectandwatch: {
+                tasks: ['connect', 'watch'],
+                options: {
+                    logConcurrentOutput: true,
                 }
             }
         }
     });
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-concurrent');
 
-    grunt.loadNpmTasks("grunt-contrib-clean");
-    grunt.loadNpmTasks("grunt-contrib-copy");
-    grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks("grunt-contrib-connect");
-
-    grunt.registerTask("build", ["clean", "copy", "concat", "uglify"]);
-    grunt.registerTask("serve", ["build", "connect"]);
-};
+    grunt.registerTask('build', ['clean', 'copy']);
+    grunt.registerTask("serve", ["build", 'concurrent:connectandwatch']);
+}

@@ -19,7 +19,7 @@
       "drm",
       "dash"
     ],
-    "author": "Robert Mitchell",
+    "author": "Ben Godby",
     "license": "SEE LICENSE IN LICENSE",
     "bugs": {
       "url": "https://github.com/jwplayer/jwplayer-chromecast-custom-receiver/issues"
