@@ -15,7 +15,7 @@
     }
 
     function licenseRequestHandler(request) {
-        request.headers['X-VUDRM-TOKEN'] = '[INSERT STUDIO DRM TOKEN HERE]';
+        request.headers['X-VUDRM-TOKEN'] = '<your-studiodrm-token>';
         return request;
     }
 })();

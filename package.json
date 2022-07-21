@@ -1,6 +1,6 @@
 {
     "name": "jwplayer-chromecast-custom-receiver",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Chromecast Custom Receiver Demo App by JW Player",
     "main": "index.html",
     "scripts": {
