@@ -1,5 +1,5 @@
 (() => {
-    const context = cast.framework.CastReceiverContext.getInstance()
+    const context = cast.framework.CastReceiverContext.getInstance();
     const playerManager = context.getPlayerManager();
     var kid;
 
@@ -10,7 +10,7 @@
         let playbackConfig = (Object.assign(new cast.framework.PlaybackConfig(), playerManager.getPlaybackConfig()));
         playbackConfig.licenseUrl = 'https://widevine-license.vudrm.tech/proxy';
         playbackConfig.licenseRequestHandler = licenseRequestHandler;
-        playbackConfig.protectionSystem = cast.framework.ContentProtection.WIDEVINE
+        playbackConfig.protectionSystem = cast.framework.ContentProtection.WIDEVINE;
         return playbackConfig;
     }
 
