@@ -1,6 +1,6 @@
-const CastService = function (stream, token) {
+const CastService = function (stream, token, laurl) {
     this._context;
-    this._laurl = 'https://widevine-license.vudrm.tech/proxy';
+    this._laurl = laurl
     this._mimeType = 'application/dash+xm';
     this._remotePlayer;
     this._remotePlayerController;
@@ -11,7 +11,7 @@ const CastService = function (stream, token) {
 CastService.prototype.initCast = function () {
     this._context = cast.framework.CastContext.getInstance();
     this._context.setOptions({
-        receiverApplicationId: '<your-receiver-application-id>',
+        receiverApplicationId: '<CUSTOM-RECEIVER-ID>',
         autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
     });
 
@@ -33,7 +33,7 @@ CastService.prototype.connectionHandler = function () {
     mediaInfo.metadata = new chrome.cast.media.GenericMediaMetadata();
     mediaInfo.metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
     mediaInfo.metadata.title = 'Studio DRM Receiver Demo';
-    mediaInfo.customData = { laurl: this._laurl, token: this._token };
+    mediaInfo.customData = { laurl: this._laurl, token: this._token};
 
     let request = new chrome.cast.media.LoadRequest(mediaInfo);
     let session = this._context.getCurrentSession();
