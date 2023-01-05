@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +19,8 @@
         window['__onGCastApiAvailable'] = function (isAvailable) {
             if (isAvailable) {
                 const stream = "<DASH-STREAM-URL>";
-                const laurl = "<LICENSE-URL>";
-                const token = "vualto-demo|2023-01-03T15:13:54Z|RAQrLiTYv+Z8U9LrxO0JDw==|016657bce2f82dab3645d9e23f91f0edfd12f336";
-                castService = new CastService(stream, token, laurl);
+                const laurl = "<WIDEVINE-LICENSE-URL>";
+                castService = new CastService(stream, laurl);
                 castService.initCast();
             }
         };

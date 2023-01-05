@@ -1,11 +1,10 @@
-const CastService = function (stream, token, laurl) {
+const CastService = function (stream, laurl) {
     this._context;
     this._laurl = laurl
     this._mimeType = 'application/dash+xm';
     this._remotePlayer;
     this._remotePlayerController;
     this._stream = stream;
-    this._token = token;
 }
 
 CastService.prototype.initCast = function () {
@@ -33,7 +32,7 @@ CastService.prototype.connectionHandler = function () {
     mediaInfo.metadata = new chrome.cast.media.GenericMediaMetadata();
     mediaInfo.metadata.metadataType = chrome.cast.media.MetadataType.GENERIC;
     mediaInfo.metadata.title = 'Studio DRM Receiver Demo';
-    mediaInfo.customData = { laurl: this._laurl, token: this._token};
+    mediaInfo.customData = { laurl: this._laurl};
 
     let request = new chrome.cast.media.LoadRequest(mediaInfo);
     let session = this._context.getCurrentSession();
