@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +17,9 @@
         let castService;
         window['__onGCastApiAvailable'] = function (isAvailable) {
             if (isAvailable) {
-                const stream = "<DASH-STREAM-URL>";
-                const laurl = "<WIDEVINE-LICENSE-URL>";
-                castService = new CastService(stream, laurl);
+                const stream = "<dash-stream-url>";
+                const token = "<your-studiodrm-token>";
+                castService = new CastService(stream, token);
                 castService.initCast();
             }
         };

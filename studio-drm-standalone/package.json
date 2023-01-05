@@ -1,0 +1,28 @@
+{
+    "name": "jwplayer-chromecast-custom-receiver",
+    "version": "1.0.0",
+    "description": "Chromecast Custom Receiver Demo App by JW Player",
+    "main": "index.html",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jwplayer/jwplayer-chromecast-custom-receiver.git"
+    },
+    "keywords": [
+      "chromecast",
+      "jwplayer",
+      "video",
+      "widevine",
+      "studio",
+      "drm",
+      "dash"
+    ],
+    "author": "Ben Godby",
+    "license": "SEE LICENSE IN LICENSE",
+    "bugs": {
+      "url": "https://github.com/jwplayer/jwplayer-chromecast-custom-receiver/issues"
+    },
+    "homepage": "https://github.com/jwplayer/jwplayer-chromecast-custom-receiver#readme"
+}

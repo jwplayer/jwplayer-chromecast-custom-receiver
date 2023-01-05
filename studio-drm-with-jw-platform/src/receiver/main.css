@@ -1,0 +1,7 @@
+body {
+    --playback-logo-image: url('./jwplayer_logo.png');
+}
+
+cast-media-player {
+    --splash-size: cover;
+}
