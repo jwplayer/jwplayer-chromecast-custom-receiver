@@ -10,7 +10,7 @@ const CastService = function (stream, laurl) {
 CastService.prototype.initCast = function () {
     this._context = cast.framework.CastContext.getInstance();
     this._context.setOptions({
-        receiverApplicationId: 'BE1D70EC',
+        receiverApplicationId: 'your-receiver-application-id',
         autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
     });
 

@@ -18,8 +18,8 @@
         let castService;
         window['__onGCastApiAvailable'] = function (isAvailable) {
             if (isAvailable) {
-                const stream = "https://content.jwplatform.com/v2/media/YkMJqkrX/manifest.mpd?policy_id=yysLM5Ua&version=v2&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI5MjI3MzksInJlc291cmNlIjoiL3YyL21lZGlhL1lrTUpxa3JYL21hbmlmZXN0Lm1wZD9wb2xpY3lfaWQ9eXlzTE01VWEmdmVyc2lvbj12MiJ9.GlaLiXdr-fcVw-gBGqLw_X8KsvEZaD6ZsqY7INVzUZU";
-                const laurl = "https://content.jwplatform.com/v2/media/YkMJqkrX/license?drm=widevine&policy_id=yysLM5Ua&version=v2&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI5MjI3MzksInJlc291cmNlIjoiL3YyL21lZGlhL1lrTUpxa3JYL2xpY2Vuc2U_ZHJtPXdpZGV2aW5lJnBvbGljeV9pZD15eXNMTTVVYSZ2ZXJzaW9uPXYyIn0.Nmgo1IuOntD_l-wbo_i1eVekZbx2vRykIzYkB0oqAqY";
+                const stream = "<dash-stream-url>";
+                const laurl = "<widevine-license-url>";
                 castService = new CastService(stream, laurl);
                 castService.initCast();
             }
