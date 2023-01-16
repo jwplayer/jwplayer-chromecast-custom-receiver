@@ -38,7 +38,7 @@ If you have any questions please contact <support@jwplayer.com>
 
 The browser must support [encrypted media extensions](https://www.w3.org/TR/2016/CR-encrypted-media-20160705/) and be Chromecast compatible such as Chrome and Firefox.
 
-For a complete breakdown of supported media extensions please contact <support@jwplayer.com>
+For a complete breakdown of supported media extensions please contact [support@jwplayer.com](mailto:support@jwplayer.com).
 
 ## Useful links
 
