@@ -19,7 +19,7 @@
       "drm",
       "dash"
     ],
-    "author": "Ben Godby",
+    "author": "Ben Godby, Taye Brown",
     "license": "SEE LICENSE IN LICENSE",
     "bugs": {
       "url": "https://github.com/jwplayer/jwplayer-chromecast-custom-receiver/issues"
