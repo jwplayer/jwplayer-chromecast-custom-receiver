@@ -8,13 +8,13 @@ This repository will demonstrate how to use [Studio DRM](https://developer.jwpla
 
 Please note, you need to [register your custom receiver app](https://developers.google.com/cast/docs/registration#RegisterApp) before continuing.
 
-If you have any questions please contact <support@jwplayer.com>
+If you have any questions please contact [support@jwplayer.com](mailto:support@jwplayer.com)
 
 ## Instructions
 
 ### Install dependencies
 
-1. Install [npm](https://www.npmjs.com/)
+1. Install [npm](https://www.npmjs.com/).
 2. Clone the repository: `git clone git@github.com:Vualto/vualto-jwplayer.git`
 3. Navigate to the project's root folder: `cd jwplayer-chromecast-custom-receiver`
 4. Install the dependencies: `npm install`
@@ -38,7 +38,7 @@ If you have any questions please contact <support@jwplayer.com>
 
 The browser must support [encrypted media extensions](https://www.w3.org/TR/2016/CR-encrypted-media-20160705/) and be Chromecast compatible such as Chrome and Firefox.
 
-For a complete breakdown of supported media extensions please contact <support@jwplayer.com>
+For a complete breakdown of supported media extensions please contact [support@jwplayer.com](mailto:support:jwplayer.com)
 
 ## Useful links
 
