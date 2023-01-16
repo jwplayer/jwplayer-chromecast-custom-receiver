@@ -14,7 +14,7 @@ If you have any questions please contact <support@jwplayer.com>
 
 ### Install dependencies
 
-1. Install [npm](https://www.npmjs.com/)
+1. Install [npm](https://www.npmjs.com/).
 2. Clone the repository: `git clone git@github.com:Vualto/vualto-jwplayer.git`
 3. Navigate to the project's root folder: `cd jwplayer-chromecast-custom-receiver`
 4. Install the dependencies: `npm install`
