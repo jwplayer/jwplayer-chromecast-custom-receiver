@@ -8,7 +8,7 @@ This repository will demonstrate how to use [Studio DRM](https://developer.jwpla
 
 Please note, you need to [register your custom receiver app](https://developers.google.com/cast/docs/registration#RegisterApp) before continuing.
 
-If you have any questions please contact [support@jwplayer.com](mailto:support@jwplayer.com)
+If you have any questions please contact [support@jwplayer.com](mailto:support@jwplayer.com).
 
 ## Instructions
 
