@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Studio DRM Sender App</title>
+    <script src="./cast-service.js"></script>
+    <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+</head>
+
+<body>
+    <google-cast-launcher></google-cast-launcher>
+    <button id="play">Play</button>
+    <script>
+        let castService;
+        window['__onGCastApiAvailable'] = function (isAvailable) {
+            if (isAvailable) {
+                const stream = "<dash-stream-url>";
+                const laurl = "<widevine-license-url>";
+                castService = new CastService(stream, laurl);
+                castService.initCast();
+            }
+        };
+    </script>
+</body>
+
+</html>
