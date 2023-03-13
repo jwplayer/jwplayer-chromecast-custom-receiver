@@ -24,10 +24,10 @@ If you have any questions please contact [support@jwplayer.com](mailto:support@j
 ### Build and run the dev environment
 
 1. Open the repository in your favourite javascript editor.
-2. In the file `src/receiver/receiver.js` replace `<your-studiodrm-token>` with a Studio DRM token. Details can be found in the [Studio DRM Token v2 documentation](https://developer.jwplayer.com/jwplayer/docs/studio-drm-token-api-v2).
-3. In the file `src/sender/cast-service.js` replace `<your-receiver-application-id>` with your receiver application ID provided by [Google](https://developers.google.com/cast/codelabs/cast-receiver#3).
-4. In the file `src/sender/index.html` replace `<dash-stream-url>` with your [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) stream URL.
-5. In the file `src/sender/index.html` replace `<your-studiodrm-token>` with a Studio DRM token. Details can be found in the [Studio DRM Token v2 documentation](https://developer.jwplayer.com/jwplayer/docs/studio-drm-token-api-v2).
+2. In the file `src/sender/cast-service.js` replace `<your-receiver-application-id>` with your receiver application ID provided by [Google](https://developers.google.com/cast/codelabs/cast-receiver#3).
+3. In the file `src/sender/index.html` replace `<dash-stream-url>` with your [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) stream URL.
+4. In the file `src/sender/index.html` replace `<studiodrm-token>` with a Studio DRM token. Details can be found in the [Studio DRM Token v2 documentation](https://developer.jwplayer.com/jwplayer/docs/studio-drm-token-api-v2).
+5. In the file `src/sender/index.html` replace `<widevine-license-url>` with your Widevine license URL. If you are unsure what your Widevine license URL is, please reach out to [support@jwplayer.com](mailto:support@jwplayer.com).
 6. Navigate to the project's root folder: `cd jwplayer-chromecast-custom-receiver`
 7. Start the [http-server](https://www.npmjs.com/package/http-server): `http-server`
 8. Start [ngrok](https://www.npmjs.com/package/ngrok): `ngrok http <port number from http-server(normally 8080)>`
