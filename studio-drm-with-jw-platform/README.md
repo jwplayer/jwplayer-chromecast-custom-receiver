@@ -25,13 +25,12 @@ If you have any questions please contact [support@jwplayer.com](mailto:support@j
 
 1. Open the repository in your favourite javascript editor.
 2. In the file `src/sender/cast-service.js` replace `<CUSTOM-RECEIVER-ID>` with your receiver application ID provided by [Google](https://developers.google.com/cast/codelabs/cast-receiver#3).
-3. In the file `src/sender/index.html` replace `<DASH-STREAM-URL>` with your [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) stream URL and `WIDEVINE-LICENSE-URL` with your Widevine license URL
-4. In the file `src/receiver/receiver.js` replace `<WIDEVINE-LICENSE-URL>` with your [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) stream URL.
-5. Navigate to the project's root folder: `cd jwplayer-chromecast-custom-receiver`
-6. Start the [http-server](https://www.npmjs.com/package/http-server): `http-server`
-7. Start [ngrok](https://www.npmjs.com/package/ngrok): `ngrok http <port number from http-server(normally 8080)>`
-8. In the Google Cast SDK Developer Console, click Edit on the Application ID for your receiver and enter `https url created by ngrok>/src/receiver` in the Receiver Application URL field box and click save.
-9. In Chrome, go to `https url created by ngrok>/src/sender`, click the cast button and select your Chromecast device.
+3. In the file `src/sender/index.html` replace `<DASH-STREAM-URL>` with your [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) stream URL and `WIDEVINE-LICENSE-URL` with your Widevine license URL.
+4. Navigate to the project's root folder: `cd jwplayer-chromecast-custom-receiver`
+5. Start the [http-server](https://www.npmjs.com/package/http-server): `http-server`
+6. Start [ngrok](https://www.npmjs.com/package/ngrok): `ngrok http <port number from http-server(normally 8080)>`
+7. In the Google Cast SDK Developer Console, click Edit on the Application ID for your receiver and enter `https url created by ngrok>/src/receiver` in the Receiver Application URL field box and click save.
+8. In Chrome, go to `https url created by ngrok>/src/sender`, click the cast button and select your Chromecast device.
 
 ### Browser support
 

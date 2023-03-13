@@ -18,8 +18,8 @@
         let castService;
         window['__onGCastApiAvailable'] = function (isAvailable) {
             if (isAvailable) {
-                const stream = "<dash-stream-url>";
-                const laurl = "<widevine-license-url>";
+                const stream = "<DASH-STREAM-URL>";
+                const laurl = "<WIDEVINE-LICENSE-URL>";
                 castService = new CastService(stream, laurl);
                 castService.initCast();
             }
