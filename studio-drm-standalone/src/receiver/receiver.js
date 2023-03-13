@@ -10,7 +10,6 @@
         let customData = loadRequestData.media.customData;
         token = customData["token"];
         laurl = customData["laurl"];
-        console.log(customData);
         playerManager.setPlaybackConfig(createPlaybackConfig(playerManager));
         return loadRequestData;
       }
