@@ -1,6 +1,6 @@
-const CastService = function (stream, token) {
+const CastService = function (stream, token, laurl) {
     this._context;
-    this._laurl = 'https://widevine-license.vudrm.tech/proxy';
+    this._laurl = laurl;
     this._mimeType = 'application/dash+xm';
     this._remotePlayer;
     this._remotePlayerController;

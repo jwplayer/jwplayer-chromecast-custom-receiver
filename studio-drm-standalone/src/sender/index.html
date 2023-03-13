@@ -18,8 +18,9 @@
         window['__onGCastApiAvailable'] = function (isAvailable) {
             if (isAvailable) {
                 const stream = "<dash-stream-url>";
-                const token = "<your-studiodrm-token>";
-                castService = new CastService(stream, token);
+                const token = "<studiodrm-token>";
+                const laurl = "<widevine-license-url>";
+                castService = new CastService(stream, token, laurl);
                 castService.initCast();
             }
         };

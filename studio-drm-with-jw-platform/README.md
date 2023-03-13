@@ -24,8 +24,8 @@ If you have any questions please contact [support@jwplayer.com](mailto:support@j
 ### Build and run the dev environment
 
 1. Open the repository in your favourite javascript editor.
-2. In the file `src/sender/cast-service.js` replace `<CUSTOM-RECEIVER-ID>` with your receiver application ID provided by [Google](https://developers.google.com/cast/codelabs/cast-receiver#3).
-3. In the file `src/sender/index.html` replace `<DASH-STREAM-URL>` with your [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) stream URL and `WIDEVINE-LICENSE-URL` with your Widevine license URL.
+2. In the file `src/sender/cast-service.js` replace `<your-receiver-application-id>` with your receiver application ID provided by [Google](https://developers.google.com/cast/codelabs/cast-receiver#3).
+3. In the file `src/sender/index.html` replace `dash-stream-url` with your [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) stream URL and `widevine-license-url` with your Widevine license URL.
 4. Navigate to the project's root folder: `cd jwplayer-chromecast-custom-receiver`
 5. Start the [http-server](https://www.npmjs.com/package/http-server): `http-server`
 6. Start [ngrok](https://www.npmjs.com/package/ngrok): `ngrok http <port number from http-server(normally 8080)>`
