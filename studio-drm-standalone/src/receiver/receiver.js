@@ -8,14 +8,30 @@
     // When the cast player is loaded, fetch the drm token and license url and set up the playback config
     playerManager.setMessageInterceptor(cast.framework.messages.MessageType.LOAD, loadRequestData => {
         let customData = loadRequestData.media.customData;
-        token = customData["token"];
-        laurl = customData["laurl"];
+        // Allows mobile devices to send the source file in their own way
+        let source = loadRequestData.media.contentUrl || loadRequestData.media.entity || loadRequestData.media.contentId;
+        if (!source || source == ""){
+            let error = new cast.framework.messages.ErrorData(
+            cast.framework.messages.ErrorType.LOAD_FAILED
+            );
+            error.reason = cast.framework.messages.ErrorReason.INVALID_REQUEST;
+            return error;
+        }
+        if (customData){
+            if (customData["laurl"]){
+                token = customData["token"];
+                laurl = customData["laurl"];
+            }
+            else if (customData["drm"]["widevine"]["url"]){
+                widevine = customData["drm"]["widevine"];
+                laurl = widevine["url"];
+                token = widevine["headers"][0]["value"];
+            }
+        }
         playerManager.setPlaybackConfig(createPlaybackConfig(playerManager));
         return loadRequestData;
       }
     );
-
-    playerManager.setPlaybackConfig(createPlaybackConfig(playerManager));
     context.start();
 
     function createPlaybackConfig(playerManager) {
