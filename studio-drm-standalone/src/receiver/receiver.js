@@ -19,13 +19,17 @@
         }
         if (customData){
             if (customData["laurl"]){
-                token = customData["token"];
-                laurl = customData["laurl"];
+                if(customData["token"]){
+                    token = customData["token"];
+                    laurl = customData["laurl"];
+                }
             }
             else if (customData["drm"]["widevine"]["url"]){
                 widevine = customData["drm"]["widevine"];
+                if (widevine["url"]){
                 laurl = widevine["url"];
                 token = widevine["headers"][0]["value"];
+                }
             }
         }
         playerManager.setPlaybackConfig(createPlaybackConfig(playerManager));
